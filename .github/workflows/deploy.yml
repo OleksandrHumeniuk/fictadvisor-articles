@@ -1,0 +1,31 @@
+name: Deployment - Production
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node_version: 16
+      - name: Install yarn
+        run: |
+          curl -fsSL -o ~/bin/yarn https://github.com/yarnpkg/yarn/releases/download/v1.22.17/yarn-1.22.17.js
+          chmod +x ~/bin/yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Build articles
+        run: yarn start
+      - name: deploy articles
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USERNAME }}
+          password: ${{ secrets.DO_PASSWORD }}
+          port: ${{ secrets.DO_PORT }}
+          source: "build/*"
+          target: "~/deployment/production/articles"

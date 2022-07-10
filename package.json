@@ -1,0 +1,16 @@
+{
+  "name": "fictadvisor-articles",
+  "version": "0.1.0",
+  "description": "Fict Advisor articles generator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "remark-html": "^15.0.1",
+    "remark-parse": "^10.0.1",
+    "unified": "^10.1.2"
+  }
+}
