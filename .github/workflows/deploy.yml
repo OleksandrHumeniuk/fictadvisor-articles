@@ -12,10 +12,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node_version: 16
-      - name: Install yarn
-        run: |
-          curl -fsSL -o ~/bin/yarn https://github.com/yarnpkg/yarn/releases/download/v1.22.17/yarn-1.22.17.js
-          chmod +x ~/bin/yarn
       - name: Install dependencies
         run: yarn install
       - name: Build articles
