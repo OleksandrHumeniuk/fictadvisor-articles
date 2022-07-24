@@ -4,6 +4,11 @@ import { unified } from "unified";
 import remarkHtml from "remark-html";
 import remarkParse from "remark-parse";
 
+const META_FILES = [
+  '__CHOSEN__',
+  '__HIDDEN__',
+]
+
 async function build(inputDir, outputDir) {
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
@@ -17,6 +22,7 @@ async function build(inputDir, outputDir) {
 async function processFile(file, outputDir) {
   if (file.endsWith('.md')) await processMarkdown(file, outputDir);
   if (file.endsWith('.html')) await processHtml(file, outputDir);
+  if (META_FILES.includes(file)) await processMetaFile(file, outputDir);
 }
 
 async function processMarkdown(file, outputDir) {
@@ -47,6 +53,10 @@ async function processMarkdown(file, outputDir) {
 async function processHtml(file, outputDir) {
   const link = getFileLink(file, '.html');
   fs.copyFileSync(file, `${outputDir}/${link}.html`);
+}
+
+async function processMetaFile(file, outputDir) {
+  fs.copyFileSync(file, `${outputDir}/${file}`);
 }
 
 function getFileLink(path, type) {
