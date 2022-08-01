@@ -22,7 +22,7 @@ async function build(inputDir, outputDir) {
 async function processFile(file, outputDir) {
   if (file.endsWith('.md')) await processMarkdown(file, outputDir);
   if (file.endsWith('.html')) await processHtml(file, outputDir);
-  if (META_FILES.includes(file)) await processMetaFile(file, outputDir);
+  await processMetaFile(file, outputDir);
 }
 
 async function processMarkdown(file, outputDir) {
@@ -56,7 +56,12 @@ async function processHtml(file, outputDir) {
 }
 
 async function processMetaFile(file, outputDir) {
-  fs.copyFileSync(file, `${outputDir}/${file}`);
+  const filename = getFileLink(file, '')
+    .substring(1) // curring the leading slash
+
+  if (!META_FILES.includes(filename)) return;
+
+  fs.copyFileSync(file, `${outputDir}/${filename}`);
 }
 
 function getFileLink(path, type) {
