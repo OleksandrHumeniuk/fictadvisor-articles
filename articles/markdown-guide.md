@@ -3,8 +3,7 @@ title: How to create article with Markdown
 author: ALEGATOR1209
 ---
 
-[FictAdvisor](https://fictadvisor.com) is capable to parse, process and display 
-Markdown code. 
+[FictAdvisor](https://fictadvisor.com) is capable to parse, process and display Markdown code. 
 
 # 1. Creating article file
 
