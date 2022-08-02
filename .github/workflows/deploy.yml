@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.DO_PASSWORD }}
           port: ${{ secrets.DO_PORT }}
           source: "./build/*"
-          target: "~/deployment/production/articles/"
-          tar_tmp_path: "~/deployment/productions/articles.tar"
+          target: ${{ secrets.DO_ARTICLES_PATH }}
+          tar_tmp_path: "${{ secrets.DO_ARTICLES_PATH }}.tar"
           rm: true
           strip_components: 1
