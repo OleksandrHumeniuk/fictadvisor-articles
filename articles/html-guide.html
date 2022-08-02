@@ -1,16 +1,45 @@
 <html>
-    <head>
-        <title>How to create article with HTML</title>
-        <comment>ALEGATOR1209</comment>
-    </head>
+<head>
+    <title>How to create article with HTML</title>
+    <comment>ALEGATOR1209</comment>
+</head>
     <body>
         <a href="https://fictadvisor.com">FictAdvisor</a> is capable to parse, process and display Markdown code.
-        <h1>1. Creating article file</h1>
+        <h1 id="1-creating-article-title">1. Creating article file</h1>
         All articles must be stored in the <code>articles</code> folder of this repository. No nested directories are allowed as they will be ignored during the build.<br/><br/>
         File name must be concise, unique (within <code>articles</code> folder) and end with <code>.html</code> marking that it's an HTML file.<br/><br/>
         Be careful when choosing filename because it will be used as a path to the article (with <code>.html</code> ending trimmed).<br/><br/>
-        <h2>2. Metadata</h2>
+        <h1 id="2-metadata">2. Metadata</h1>
         At the start of the file a <em>metadata section</em> should be placed. That's where article title and authors are.<br/><br/>
         Format of the metadata section is following:
+        <pre>
+            <code>
+&lt;head&gt;
+    &lt;title&gt;Article title&lt;/title&gt;
+    &lt;comment&gt;Article author&lt;/comment&gt;
+&lt;/head&gt;
+            </code>
+        </pre>
+        <h1 id="3-content">3. Content</h1>
+        Content of the article can be composed of the usual HTML tags. For the most common, there are predefined styles.
+        <ul>
+            <li>Use <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, etc for headers. Automatic anchoring isn't supported yet, so you should manually assign headers <code>id</code> attribute if you want it.</li>
+            <li>Use <code>&lt;img&gt;</code> for images and always give the full URL to the <code>href</code> parameter.</li>
+            <li>Use <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> and <code>&lt;li&gt;</code> tags for lists.</li>
+            <li>Use <code>&lt;a&gt;</code> for links. Always pass the full URL.</li>
+            <li>Use <code>&lt;em&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> for text formatting.</li>
+            <li>Use <code>&lt;br/&gt;</code> for line breaks.</li>
+            <li>Use <code>&lt;code&gt;</code> for single-line code samples and <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code> for multiline ones.</li>
+            <li><b>Use any other HTML tags and even combine them with JS or CSS if needed, but we can't guarantee pretty styling for them.</b></li>
+        </ul>
+        <h1 id="4-page-management">4. Page management</h1>
+        All articles are listed at the <a href="https://fictadvisor.com/articles">articles page</a>. Two special files are present to alter this behavior.<br/>
+        Article can be included into the featured articles list that is displayed at the Fict Advisor front page by including it into <code>__CHOSEN__</code> file.
+        Articles, included in the <code>__HIDDEN__</code> file aren't displayed at the <code>/articles</code> page, but still can be accessed with the direct link. It's useful for drafts.
+        In both cases, you should include articles in both files using its pathname (filename without extension) separated with the line break. For example, to list articles in files <code>sample1.html</code> and <code>sample2.md</code> as featured, you should add following lines to the <code>__CHOSEN__</code> file:
+        <pre><code>
+sample1
+sample2
+        </code></pre>
     </body>
 </html>
