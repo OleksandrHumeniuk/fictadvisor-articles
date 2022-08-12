@@ -1,6 +1,6 @@
 ---
 title: Оплата за проживання в гуртожитку
-author: Студрада ФІОТ
+author: Відділ гайдів, @Youn1on
 ---
 
 ![oplata.png](https://telegra.ph/file/ba97cb36a9cb27c6d2542.png)
