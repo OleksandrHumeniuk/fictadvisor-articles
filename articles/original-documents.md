@@ -3,13 +3,13 @@ title: Подання документів для вступу на бюджет
 author: Відділ гайдів, @coffeewithsmth
 ---
 
-![babki.png](https://imgur.com/a/TE5ZOMk)
+![babki.png](https://i.imgur.com/3S0Xf4x.png)
 
 Щоб вважати себе повноправним студентом закладу вищої освіти, необхідно подати документи та підписати договір про навчання. В цьому гайді розкажемо, як і якими способами подати документи до КПІ, та відповімо на часті питання під час подання оригіналів.
 
 ## Необхідні документи
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/587952af-20c6-4248-9a9e-bee8d8a65c67/Untitled.png)
+![Untitled](https://i.imgur.com/k8Oc6fg.png)
 
 ## Подання документів
 
