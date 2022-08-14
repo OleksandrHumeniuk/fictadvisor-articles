@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "node-html-parser": "^5.4.2-0",
     "remark-html": "^15.0.1",
     "remark-parse": "^10.0.1",
+    "slugify": "^1.6.5",
     "unified": "^10.1.2"
   }
 }
