@@ -5,7 +5,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+    "lint": "eslint --fix ."
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -14,5 +15,9 @@
     "remark-parse": "^10.0.1",
     "slugify": "^1.6.5",
     "unified": "^10.1.2"
+  },
+  "devDependencies": {
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
