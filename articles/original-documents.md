@@ -1,6 +1,6 @@
 ---
 title: Подання документів для вступу на бюджет
-author: Відділ гайдів, @hoshinon
+author: Відділ гайдів, @hoshinon, @coffeewithsmth, @sOleksandr  
 ---
 
 ![babki.png](https://i.imgur.com/3S0Xf4x.png)
