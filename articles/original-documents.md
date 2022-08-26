@@ -9,7 +9,7 @@ author: Відділ гайдів, @hoshinon, @coffeewithsmth, @sOleksandr
 
 ## Необхідні документи
 
-![Untitled](https://i.imgur.com/k8Oc6fg.png)
+![Untitled](https://telegra.ph/file/4c073a709710fa861e35d.png)
 
 ## Подання документів
 
