@@ -1,6 +1,6 @@
 ---
 title: Гайд про освіту
-author: Відділ гайдів, @hoshion
+author: Відділ гайдів, @hoshinon
 ---
 
 ![](https://telegra.ph/file/f66b465edeb0b7547d799.png)
